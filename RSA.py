@@ -35,15 +35,13 @@ class RSA:
                 self.X = params['X']
                 self.e = params['e']
                 self.n = params['n']
-                # self.encr_X = self.__fast_power(self.X, self.e, self.n)
                 self.Y = self.__fast_power(self.X, self.e, self.n)
-                # print(f"encrypted message: {self.encr_X}")
                 print(f"encrypted message: {self.Y}")
             case "Decr":
                 params = json.loads(readed_json)['Decr']
-                # self.Y = params['Y']
-                # self.e = params['e']
-                # self.n = params['n']
+                self.Y = params['Y']
+                self.e = params['e']
+                self.n = params['n']
                 self.decr_Y = self.__fast_power(self.Y, self.d, self.n)
                 print(f"decrypted message: {self.decr_Y}")
             case "Exit":

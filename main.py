@@ -10,7 +10,7 @@ from RSA import RSA
 
 
 def main():
-    cryptor = RSA('lab3/data.json')
+    cryptor = RSA('lab3/data-1.json')
     while True:
         option = input()
         cryptor(option)
